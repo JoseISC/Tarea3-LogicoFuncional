@@ -1,0 +1,202 @@
+Tarea 3 - Paradigma Funcional y Lógico
+Deben realizar lo siguiente
+
+(70%) Grupal: Implementar una solución para el Sistema de Gestión de Calorías para el Restaurante "Mi Mejor Comida" usando Java con elementos de proramación funcional, o bien Prolog, usando programación lógica. Deben escojer uno de los dos paradigmas/lenguajes.
+
+(30%) Individual: uno de los módulos de Coursera disponibles en el aula virtual
+
+Si realiza los dos módulos de Coursera, la ponderación entre ambas partes queda así:  55% parte grupal, 45% parte módulos Coursera
+
+Deadline: lunes 23.6, 18:00
+
+Parte grupal: vía repositorio Github (indicar link)
+Parte individual: queda en el libro de calificaciones la realización completa de los módulos.
+Sistema de Gestión de Calorías para el Restaurante "Mi Mejor Comida"
+Introducción
+"Mi Mejor Comida" es un reconocido restaurante que ofrece una variedad de platos deliciosos y balanceados, preparados con ingredientes frescos y de alta calidad. Nuestro menú está cuidadosamente diseñado para satisfacer todos los gustos, desde entradas ligeras hasta platos principales sustanciosos y postres exquisitos, garantizando una experiencia culinaria inolvidable.
+
+Para ayudar a nuestros clientes a mantener un control de su ingesta calórica, hemos desarrollado un sistema en Prolog que permite:
+
+Calcular las calorías totales de un menú personalizado (entrada + principal + postre).
+
+Mostrar combinaciones de platos que no superen un límite de calorías indicado por el usuario.
+
+ 
+
+Descripción del Problema
+Se requiere un programa en Java (usando Programación Funcional) Prolog (usandor programación lógica) que haga una Base de Conocimientos de Platos y Calorías. Registre los platos del restaurante con sus respectivas calorías, clasificados en: Entradas: Paella, Gazpacho, Pasta, Ensalada César, Sopa de verduras. Platos principales: Filete de cerdo, Pollo asado, Bistec a lo pobre, Trucha, Bacalao, Salmón a la plancha, Lasaña.Postres: Flan, Naranja, Nueces, Yogur, Helado.
+
+2. Funcionalidades
+a) Cálculo de Calorías por Menú. El usuario debe poder seleccionar:
+Una entrada, un plato principal y un postre y el sistema devolverá el total de calorías del menú elegido.
+
+b) Combinaciones Bajas en Calorías. El usuario ingresa un límite máximo de calorías (ej: 600 calorías).
+El sistema muestra todas las combinaciones posibles (entrada + principal + postre) que no superen ese límite.
+ 
+3. Requisitos Técnicos
+Si utiliza programación funcional sobre Java, los algoritmos relativos a estructuras de datos debe ser usando expresiones lambda y mapping de funciones
+
+Si utiliza Prolog, no usar listas (solo estructuras básicas de Prolog: hechos, reglas, write, read, comparaciones, fail, !, etc.).
+
+ 
+
+Interactividad: El programa debe guiar al usuario con mensajes claros.
+
+Manejo de errores: Si el usuario ingresa un plato no válido, el sistema debe notificarlo y permitir reintentar.
+
+Las calorias esta en la siguiente tabla:
+
+ 
+
+ENTRADA
+
+ 
+
+Paella
+
+200
+
+Gazpacho
+
+150
+
+Pasta
+
+300
+
+Enasalda Cesar
+
+180
+
+Sopa de Verduras
+
+120
+
+PLATO PRINCIPAL
+
+ 
+
+Filete de cerdo
+
+400
+
+Pollo asado
+
+280
+
+Bisteck a lo pobre
+
+500
+
+Trucha
+
+160
+
+Bacalao
+
+300
+
+Salmon a la Plancha
+
+350
+
+Lasagna
+
+450
+
+POSTRE
+
+ 
+
+Flan
+
+200
+
+Naranja
+
+50
+
+Nueces
+
+500
+
+Yogurt
+
+100
+
+Helado
+
+250
+
+ 
+
+Reiteramos nuevamente para que se entienda el problema. Se quiere hacer un programa en prolog que pidiendo el Plato de Entrada, Plato pricipal y el postre, sumar cuantas calorias tiene ese plato pedido por un cliente, por otra parte si el cliente pide no pasarse de tantas calorias (ej. 600 calorias) se debe ofrecer la combinación de platos posibles que puede ofrecer el restaurante.
+
+ 
+
+En caso de utilizar programación funcional sobre Java, los algoritmos relativos a estructuras de datos debe ser usando expresiones lambda y mapping de funciones. En el caso de usar programación lógica sobre Prolog, utilizar hechos y reglas para hacer el programa y no usar listas.
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Ejemplo de Interaccion en consola
+
+Ejecutar:
+
+ 
+
+BIENVENIDO A "MI MEJOR COMIDA"
+
+--------------------------------------
+
+Calcular calorías de un menú específico
+Mostrar combinaciones bajas en calorías
+Salir
+ 
+
+Seleccione una opción (1-3): 2.
+
+ 
+
+--- MENÚS BAJOS EN CALORÍAS ---
+
+Ingrese el máximo de calorías deseado: 500.
+
+ 
+
+Combinaciones disponibles con menos de 500 calorías:
+
+ 
+
+* Entrada: Gazpacho (150 cal)
+
+  Principal: Trucha (160 cal)
+
+  Postre: Naranja (50 cal)
+
+  TOTAL: 360 calorías
+
+ 
+
+* Entrada: Ensalada César (180 cal)
+
+  Principal: Pollo asado (280 cal)
+
+  Postre: Yogur (100 cal)
+
+  TOTAL: 560 calorías (¡No válida! Se excluye automáticamente)
