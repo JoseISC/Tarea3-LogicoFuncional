@@ -54,12 +54,13 @@ sumar_calorias(E,P,D,Total) :-
     Total is CE + CP + CD.
 
 % Muestra una combinación formateada
-mostrar_combinacion(E,P,D,Total) :-
-    format('* Entrada: ~w (~w kcal)~n',  [E,CE]), calorias(E,CE),
-    format('  Principal: ~w (~w kcal)~n',[P,CP]), calorias(P,CP),
-    format('  Postre: ~w (~w kcal)~n',   [D,CD]), calorias(D,CD),
+mostrar_combinacion(E,P,D,Total) :-    
+    calorias(E,CE),format('* Entrada: ~w (~w kcal)~n',  [E,CE]),
+    calorias(P,CP),format('  Principal: ~w (~w kcal)~n',[P,CP]),
+    calorias(D,CD),format('  Postre: ~w (~w kcal)~n',   [D,CD]),
     Total is CE+CP+CD,
     format('  TOTAL: ~w calorías~n~n',   [Total]).
+
 
 % Opción 1: cálculo de calorías de un menú específico
 opcion_calculo_menu :-
